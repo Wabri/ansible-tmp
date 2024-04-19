@@ -2,10 +2,10 @@
   hosts: all
   become: true
   tasks:
-    - name: ip
-      shell: ip add
+    - name: Ping site
+      shell: ping -c 1 -w 2 google.com
       register: ping_result
 
-    - name: ip result
+    - name: Ping result
       debug:
         msg: "{{ ping_result.stdout_lines }}"
