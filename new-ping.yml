@@ -1,5 +1,4 @@
 - hosts: site
-  hosts: all
   become: true
   tasks:
     - name: Ping site
